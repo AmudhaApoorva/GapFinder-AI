@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # GapFinder AI
 
 > **Syllabus-Grounded Diagnostic Intelligence**  
@@ -182,3 +183,6 @@ npm run db:seed
 ## 🛡️ License
 
 MIT License. Designed and developed for syllabus-grounded diagnostic learning.
+=======
+# GapFinder-AI
+>>>>>>> 054d934cecb59b051bf4fa9bbb4780cd14600526
