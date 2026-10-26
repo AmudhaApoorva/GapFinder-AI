@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --paper: #f8f5ee;
+  --ink: #141210;
+  --card-bg: #ffffff;
+}
+
+html,
+body {
+  background: var(--paper);
+  color: var(--ink);
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image:
+    radial-gradient(circle at 10% 0%, rgba(196, 92, 38, 0.08), transparent 32%),
+    radial-gradient(circle at 90% 15%, rgba(47, 93, 80, 0.06), transparent 28%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.6), transparent 22rem);
+  min-height: 100vh;
+}
+
+/* Subtle modern mesh grid */
+.grid-fade {
+  background-image:
+    linear-gradient(to right, rgba(22, 19, 17, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(22, 19, 17, 0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Glassmorphism surfaces */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(216, 207, 193, 0.8);
+}
+
+.glass-dark {
+  background: rgba(22, 19, 17, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Diagnosis Level Indicators */
+.weak {
+  background: #faece6;
+  color: #9c3c1b;
+  border: 1px solid #f4c2b0;
+}
+.medium {
+  background: #fbf5e6;
+  color: #8c6314;
+  border: 1px solid #ebd8a7;
+}
+.strong {
+  background: #eaf3ef;
+  color: #1b6350;
+  border: 1px solid #badfd3;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #d8cfc1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a89d8f;
+}
+
+/* Focus and active interaction */
+*:focus-visible {
+  outline: 2px solid #c45c26;
+  outline-offset: 2px;
+}
+
+/* Print optimizations for Gap Report */
+@media print {
+  aside, nav, button, .no-print {
+    display: none !important;
+  }
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .glass-panel, .rounded-2xl {
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+  }
+}
+
